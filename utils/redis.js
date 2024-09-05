@@ -23,8 +23,8 @@ class RedisClient {
    * @param {string} key - The key to retrieve
    * @returns {Promise<string | null>} - The value of the key, or null if not found
    */
-   get(key) {
-    const get = promisify(this.client.get).bind(this.client)
+  get(key) {
+    const get = promisify(this.client.get).bind(this.client);
     return get(key);
   }
 
@@ -35,7 +35,7 @@ class RedisClient {
    * @param {number} duration - The expiration time in seconds
    * @returns {Promise<void>}
    */
-   set(key, value, duration) {
+  set(key, value, duration) {
     const set = promisify(this.client.setex).bind(this.client);
     return set(key, duration, value);
   }
@@ -45,7 +45,7 @@ class RedisClient {
    * @param {string} key - The key to delete
    * @returns {Promise<void>}
    */
-   del(key) {
+  del(key) {
     const del = promisify(this.client.del).bind(this.client);
     return del(key);
   }
@@ -54,4 +54,3 @@ class RedisClient {
 // Create and export an instance of RedisClient
 const redisClient = new RedisClient();
 export default redisClient;
-

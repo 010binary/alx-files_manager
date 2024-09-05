@@ -1,6 +1,6 @@
 {
   "name": "files_manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "---",
   "main": "index.js",
   "scripts": {
@@ -11,17 +11,8 @@
     "dev": "nodemon --exec babel-node --presets @babel/preset-env",
     "test": "./node_modules/.bin/mocha --require @babel/register --exit"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/010binary/alx-files_manager.git"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/010binary/alx-files_manager/issues"
-  },
-  "homepage": "https://github.com/010binary/alx-files_manager#readme"
   "dependencies": {
     "bull": "^3.16.0",
     "chai-http": "^4.3.0",
